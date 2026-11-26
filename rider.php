@@ -3,7 +3,7 @@ if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
 
-// Sekat akses jika bukan Rider / Runner (Pelajar dan Vendor akan ditendang ke index.php)
+//block access kalau bukan Rider / Runner (Pelajar dan Vendor akan ditendang balik ke index.php)
 if (!isset($_SESSION['user_id']) || !isset($_SESSION['role']) || !in_array(strtolower($_SESSION['role']), ['rider', 'runner'])) {
     header('Location: index.php');
     exit;
