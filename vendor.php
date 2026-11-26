@@ -3,7 +3,7 @@ if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
 
-// Sekat akses jika bukan Seller / Vendor (Pelajar dan Guest akan ditendang balik ke index.php)
+//block access kalau bukan vendor (Pelajar dan Guest akan ditendang balik ke index.php)
 if (!isset($_SESSION['user_id']) || !isset($_SESSION['role']) || strtolower($_SESSION['role']) !== 'seller') {
     header('Location: index.php');
     exit;
