@@ -1,0 +1,18 @@
+# Composer / Laravel dependencies
+/vendor/
+/laravel-app/vendor/
+/node_modules/
+/laravel-app/node_modules/
+
+# Environment & local config
+.env
+/laravel-app/.env
+/laravel-app/storage/logs/*.log
+/laravel-app/storage/framework/cache/data/*
+/laravel-app/storage/framework/sessions/*
+/laravel-app/storage/framework/views/*.php
+
+# Temporary & OS files
+scratch*.php
+.DS_Store
+Thumbs.db
